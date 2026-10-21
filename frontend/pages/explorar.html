@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore o meio ambiente pelos 7 grandes eixos temáticos do EcoRadar: Clima, Florestas, Oceanos, Biodiversidade, Energia, Poluição e Sustentabilidade.">
+  <title>Explore o Meio Ambiente — EcoRadar</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+</head>
+<body>
+
+  <!-- CABECALHO -->
+  <header class="header" role="banner">
+    <div class="container header-container">
+      <a href="../index.html" class="logo-link" aria-label="Página Inicial EcoRadar">
+        <img src="../assets/img/logo.svg" alt="Logotipo EcoRadar" class="logo-img">
+      </a>
+
+      <nav class="nav-menu" id="primary-nav-menu" aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="catalog.html" class="nav-link">Notícias</a></li>
+          <li><a href="explorar.html" class="nav-link active">Explorar</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <div class="mode-toggle-wrapper" role="radiogroup" aria-label="Seletor de Modo de Leitura">
+            <button class="mode-btn active" data-mode="simple" aria-checked="true">Simples</button>
+            <button class="mode-btn" data-mode="advanced" aria-checked="false">Avançado</button>
+          </div>
+
+          <button class="btn-accessibility" aria-label="Abrir Painel de Acessibilidade">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="7.5" r="1.5" fill="currentColor"/>
+              <path d="M7 11h10M12 11v8M9 19l3-4 3 4"/>
+            </svg>
+            <span>Acessibilidade</span>
+          </button>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-nav-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="main-content" id="main-content" role="main">
+    <div class="container">
+
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 3.5rem auto;">
+        <span class="section-tag">Navegação Guiada</span>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.75rem;">Explore o Meio Ambiente</h1>
+        <p style="color: var(--color-text-muted); font-size: 1.1rem;">
+          Conheça os 7 eixos fundamentais da sustentabilidade tecnológica e selecione uma área para acessar conteúdos focados.
+        </p>
+      </div>
+
+      <!-- grade dos 7 eixos ambientais -->
+      <div class="explorar-grid">
+        
+        <!-- Eixo 1: Florestas -->
+        <a href="catalog.html?cat=Florestas" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Florestas</h2>
+            <p class="eixo-description">
+              Preservação de biomas, combate ao desmatamento com satélites, reflorestamento e proteção do solo.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Florestas &rarr;</span>
+        </a>
+
+        <!-- Eixo 2: Oceanos -->
+        <a href="catalog.html?cat=Oceanos" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Oceanos</h2>
+            <p class="eixo-description">
+              Monitoramento da temperatura marinha, proteção de corais, vida aquática e correntes atlânticas.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Oceanos &rarr;</span>
+        </a>
+
+        <!-- Eixo 3: Clima -->
+        <a href="catalog.html?cat=Clima" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Clima</h2>
+            <p class="eixo-description">
+              Mudanças climáticas globais, eventos meteorológicos extremos, aquecimento urbano e metas de emissão.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Clima &rarr;</span>
+        </a>
+
+        <!-- Eixo 4: Biodiversidade -->
+        <a href="catalog.html?cat=Biodiversidade" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Biodiversidade</h2>
+            <p class="eixo-description">
+              Recuperação de espécies ameaçadas, corredores ecológicos e monitoramento inteligente de fauna.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Biodiversidade &rarr;</span>
+        </a>
+
+        <!-- Eixo 5: Energia -->
+        <a href="catalog.html?cat=Energia" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Energia</h2>
+            <p class="eixo-description">
+              Transição energética, matriz fotovoltaica, eólica, biomassa e eficiência de redes inteligentes.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Energia &rarr;</span>
+        </a>
+
+        <!-- Eixo 6: Sustentabilidade -->
+        <a href="catalog.html?cat=Sustentabilidade" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Sustentabilidade</h2>
+            <p class="eixo-description">
+              Economia circular, logística reversa, resíduos urbanos, compostagem e consumo consciente.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Sustentabilidade &rarr;</span>
+        </a>
+
+        <!-- Eixo 7: Poluiçao -->
+        <a href="catalog.html?cat=Poluição" class="eixo-card" style="text-decoration: none; color: inherit;">
+          <div>
+            <div class="eixo-icon"></div>
+            <h2 class="eixo-title">Poluição</h2>
+            <p class="eixo-description">
+              Qualidade do ar urbano, microplásticos na água, gestão de resíduos industriais e tecnologias de filtragem.
+            </p>
+          </div>
+          <span class="eixo-stats-preview">Ver Notícias de Poluição &rarr;</span>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPE FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/img/logo.svg" alt="EcoRadar" class="footer-logo">
+          <p class="footer-tagline">Conscientização e tecnologia ambiental para todos.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="catalog.html">Notícias</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Acessibilidade</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="btn-accessibility">Abrir Painel de Recursos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoRadar. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/accessibility.js"></script>
+  <script src="../assets/js/speech.js"></script>
+  <script src="../assets/js/catalog.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

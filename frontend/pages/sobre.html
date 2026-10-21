@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saiba mais sobre o EcoRadar, nossa missão de conscientização ambiental, acessibilidade digital e tecnologia transparente.">
+  <title>Sobre o EcoRadar — Propósito e Acessibilidade</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+</head>
+<body>
+
+  <!-- CABECALHO -->
+  <header class="header" role="banner">
+    <div class="container header-container">
+      <a href="../index.html" class="logo-link" aria-label="Página Inicial EcoRadar">
+        <img src="../assets/img/logo.svg" alt="Logotipo EcoRadar" class="logo-img">
+      </a>
+
+      <nav class="nav-menu" id="primary-nav-menu" aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="catalog.html" class="nav-link">Notícias</a></li>
+          <li><a href="explorar.html" class="nav-link">Explorar</a></li>
+          <li><a href="sobre.html" class="nav-link active">Sobre</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <div class="mode-toggle-wrapper" role="radiogroup" aria-label="Seletor de Modo de Leitura">
+            <button class="mode-btn active" data-mode="simple" aria-checked="true">Simples</button>
+            <button class="mode-btn" data-mode="advanced" aria-checked="false">Avançado</button>
+          </div>
+
+          <button class="btn-accessibility" aria-label="Abrir Painel de Acessibilidade">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="7.5" r="1.5" fill="currentColor"/>
+              <path d="M7 11h10M12 11v8M9 19l3-4 3 4"/>
+            </svg>
+            <span>Acessibilidade</span>
+          </button>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-nav-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="main-content" id="main-content" role="main">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- hero institucional -->
+      <section style="margin-bottom: 3.5rem;">
+        <span class="section-tag">Nossa Missão</span>
+        <h1 style="font-size: 2.8rem; margin-bottom: 1rem;">O que é o EcoRadar?</h1>
+        <p style="font-size: 1.2rem; color: var(--color-text-muted); line-height: 1.6;">
+          O EcoRadar é uma plataforma digital criada para tornar a informação sobre o meio ambiente acessível, compreensível e relevante para todas as pessoas, independentemente do seu conhecimento prévio.
+        </p>
+      </section>
+
+      <!-- seçao: Proposito -->
+      <section style="margin-bottom: 3.5rem;" id="como-funciona">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Conscientização sem Barreiras Técnicas</h2>
+        <p style="line-height: 1.7; margin-bottom: 1rem;">
+          Muitas vezes, relatórios sobre mudanças climáticas, desmatamento e transição energética utilizam termos muito complicados. Acreditamos que a conscientização ambiental só acontece quando as pessoas entendem de verdade o que está em jogo.
+        </p>
+        <p style="line-height: 1.7;">
+          Por isso, criamos o **Modo Simples** (com explicações diretas e cotidianas) e o **Modo Avançado** (para quem busca dados, porcentagens e terminologia acadêmica).
+        </p>
+      </section>
+
+      <!-- seçao: Recursos de Acessibilidade -->
+      <section style="background-color: var(--color-surface); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); margin-bottom: 3.5rem;" id="acessibilidade">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="var(--color-moss-green-dark)" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="7.5" r="1.5" fill="currentColor"/>
+            <path d="M7 11h10M12 11v8M9 19l3-4 3 4"/>
+          </svg>
+          Compromisso Total com a Acessibilidade
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"> Síntese de Voz Nativa</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+              Você pode ouvir a leitura completa de qualquer notícia com controle de pausa e ajuste de velocidade.
+            </p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"> Pesquisa por Voz</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+              Utilize o microfone para pesquisar tópicos no catálogo usando a Web Speech API.
+            </p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"> Alto Contraste & Tipografia</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+              Ajuste o tamanho do texto (A- a A++) e ative o tema de alto contraste diretamente no painel.
+            </p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"> Redução de Movimento</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+              Respeitamos a preferência de usuários sensíveis a animações ativando o modo de movimento reduzido.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- seçao: Arquitetura Tecnologica -->
+      <section style="margin-bottom: 4rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Tecnologia Pura & Desempenho</h2>
+        <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+          O EcoRadar foi desenvolvido com Front-End puro (HTML5, CSS3 e Vanilla JavaScript), garantindo leveza, carregamento instantâneo e total independência de bibliotecas pesadas. Toda a estrutura de código foi projetada de forma modular para integrar-se perfeitamente a APIs e bancos de dados em fases futuras.
+        </p>
+
+        <a href="catalog.html" class="btn btn-primary">
+          Conhecer Notícias e Fazer uma Leitura &rarr;
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- RODAPE FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/img/logo.svg" alt="EcoRadar" class="footer-logo">
+          <p class="footer-tagline">Democratizando a informação ambiental com tecnologia e acessibilidade.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="catalog.html">Notícias</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Acessibilidade</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="btn-accessibility">Abrir Painel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoRadar. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/accessibility.js"></script>
+  <script src="../assets/js/speech.js"></script>
+  <script src="../assets/js/catalog.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

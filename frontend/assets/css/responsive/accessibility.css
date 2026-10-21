@@ -1,0 +1,216 @@
+/* 
+  ==========================================================================
+   ECORADAR - ACCESSIBILITY.CSS
+   Estilos de Acessibilidade: Alto Contraste, Fontes Escaláveis e Redução de Movimento
+  ========================================================================== 
+*/
+
+/* 1. MODO DE ALTO CONTRASTE */
+body.high-contrast {
+  --color-black: #000000;
+  --color-moss-green: #00FF66;
+  --color-moss-green-dark: #00CC52;
+  --color-moss-green-light: #003311;
+  --color-ocean-blue: #0066FF;
+  --color-ocean-blue-hover: #0052CC;
+  --color-light-blue: #001A4D;
+  --color-light-blue-accent: #0099FF;
+
+  --color-background: #000000;
+  --color-surface: #121212;
+  --color-surface-hover: #1E1E1E;
+  --color-surface-elevated: #1E1E1E;
+
+  --color-text: #FFFFFF;
+  --color-text-muted: #E0E0E0;
+  --color-text-light: #CCCCCC;
+  --color-text-inverse: #000000;
+
+  --color-border: #444444;
+  --color-border-hover: #FFFFFF;
+}
+
+body.high-contrast .header {
+  background-color: #000000;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+body.high-contrast .news-card,
+body.high-contrast .mode-card,
+body.high-contrast .eixo-card,
+body.high-contrast .reading-toolbar,
+body.high-contrast .news-controls-container {
+  background-color: #121212;
+  border: 2px solid #FFFFFF;
+}
+
+body.high-contrast .btn-primary {
+  background-color: #00FF66;
+  color: #000000;
+  font-weight: 800;
+}
+
+body.high-contrast .btn-secondary {
+  background-color: #0066FF;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+body.high-contrast .filter-pill.active {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+body.high-contrast :focus-visible {
+  outline: 4px solid #FFFF00 !important;
+  outline-offset: 4px !important;
+}
+
+/* 2. ESCALONAMENTO DE TAMANHO DE FONTE */
+body.font-sm { font-size: 14px; }
+body.font-md { font-size: 16px; }
+body.font-lg { font-size: 18px; }
+body.font-xl { font-size: 20px; }
+
+body.font-lg h1 { font-size: 3.5rem; }
+body.font-xl h1 { font-size: 4rem; }
+
+/* 3. REDUÇÃO DE ANIMAÇÕES E MOVIMENTO */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* 4. PAINEL VISUAL DE ACESSIBILIDADE (DRAWER/MODAL) */
+.accessibility-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.accessibility-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.accessibility-panel {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  overflow-y: auto;
+}
+
+.accessibility-modal-overlay.open .accessibility-panel {
+  transform: translateX(0);
+}
+
+.acc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.acc-title {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.acc-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.acc-section {
+  margin-bottom: 2rem;
+}
+
+.acc-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.acc-btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.acc-btn {
+  flex: 1;
+  padding: 0.6rem 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.acc-btn:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.acc-btn.active {
+  background-color: var(--color-ocean-blue);
+  color: #FFFFFF;
+  border-color: var(--color-ocean-blue);
+}
+
+.acc-toggle-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.acc-toggle-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}

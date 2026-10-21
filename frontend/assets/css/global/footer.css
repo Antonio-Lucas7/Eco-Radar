@@ -1,0 +1,108 @@
+/* 
+  ==========================================================================
+   ECORADAR - FOOTER.CSS
+   Estilos do Rodapé da Aplicação
+  ========================================================================== 
+*/
+
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-text-light);
+  padding: 4rem 0 2rem 0;
+  border-top: 4px solid var(--color-moss-green);
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+.footer-column-title {
+  font-family: var(--font-title);
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: #94A3B8;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-moss-green);
+}
+
+.footer-accessibility-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: #E2E8F0;
+  font-size: 0.85rem;
+}
+
+.footer-accessibility-badge svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-moss-green);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: #64748B;
+}
+
+.footer-bottom-links a:hover {
+  color: #94A3B8;
+}

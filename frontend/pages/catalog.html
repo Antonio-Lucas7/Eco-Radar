@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de Notícias do EcoRadar com busca por voz, filtros por categoria e modos simples e avançado.">
+  <title>Catálogo de Notícias — EcoRadar</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+</head>
+<body>
+
+  <!-- CABECALHO -->
+  <header class="header" role="banner">
+    <div class="container header-container">
+      <a href="../index.html" class="logo-link" aria-label="Página Inicial EcoRadar">
+        <img src="../assets/img/logo.svg" alt="Logotipo EcoRadar" class="logo-img">
+      </a>
+
+      <nav class="nav-menu" id="primary-nav-menu" aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="catalog.html" class="nav-link active">Notícias</a></li>
+          <li><a href="explorar.html" class="nav-link">Explorar</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <div class="mode-toggle-wrapper" role="radiogroup" aria-label="Seletor de Modo de Leitura">
+            <button class="mode-btn active" data-mode="simple" aria-checked="true">Simples</button>
+            <button class="mode-btn" data-mode="advanced" aria-checked="false">Avançado</button>
+          </div>
+
+          <button class="btn-accessibility" aria-label="Abrir Painel de Acessibilidade">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="7.5" r="1.5" fill="currentColor"/>
+              <path d="M7 11h10M12 11v8M9 19l3-4 3 4"/>
+            </svg>
+            <span>Acessibilidade</span>
+          </button>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-nav-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="main-content" id="main-content" role="main">
+    <div class="container">
+
+      <!-- Titulo da Pagina -->
+      <div style="margin-bottom: 2rem;">
+        <span class="section-tag">Jornalismo & Dados Ambientais</span>
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Catálogo de Notícias</h1>
+        <p style="color: var(--color-text-muted);">
+          Explore todas as publicações ambientais. Alterne para o Modo Avançado para ver estatísticas detalhadas.
+        </p>
+      </div>
+
+      <!-- Caixa de Controle: Pesquisa, Voz e Filtros -->
+      <section class="news-controls-container" aria-label="Filtros e Pesquisa de Notícias">
+        
+        <!-- Pesquisa + Botão de Voz -->
+        <div class="search-box-wrapper">
+          <div class="search-input-group">
+            <svg class="search-icon-inside" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input 
+              type="text" 
+              id="news-search-input" 
+              class="search-input" 
+              placeholder=" O que você quer saber? Ex: Amazônia, Energia Solar, Oceanos..."
+              aria-label="Campo de busca de notícias"
+            >
+          </div>
+
+          <!-- botão fale com o EcoRadar (Web Speech Recognition - chique) -->
+          <button id="btn-voice-search" class="btn-voice-search" title="Falar termo de busca em voz alta">
+             Falar
+          </button>
+        </div>
+
+        <!-- filtros por categoria -->
+        <div class="category-filters" role="tablist" aria-label="Categorias de Notícias">
+          <button class="filter-pill active" data-category="Todas" role="tab" aria-selected="true">Todas</button>
+          <button class="filter-pill" data-category="Clima" role="tab" aria-selected="false"> Clima</button>
+          <button class="filter-pill" data-category="Florestas" role="tab" aria-selected="false"> Florestas</button>
+          <button class="filter-pill" data-category="Oceanos" role="tab" aria-selected="false"> Oceanos</button>
+          <button class="filter-pill" data-category="Biodiversidade" role="tab" aria-selected="false"> Biodiversidade</button>
+          <button class="filter-pill" data-category="Energia" role="tab" aria-selected="false"> Energia</button>
+          <button class="filter-pill" data-category="Poluição" role="tab" aria-selected="false"> Poluição</button>
+          <button class="filter-pill" data-category="Sustentabilidade" role="tab" aria-selected="false"> Sustentabilidade</button>
+        </div>
+      </section>
+
+      <!-- grade de noticias renderizada dinamicamente -->
+      <section aria-label="Lista de Notícias">
+        <div class="news-grid" id="news-grid-container">
+          <!-- Renderizado via JS catalog.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- RODAPE FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/img/logo.svg" alt="EcoRadar" class="footer-logo">
+          <p class="footer-tagline">Plataforma de conscientização ambiental e acessibilidade digital.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="catalog.html">Notícias</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Modos de Leitura</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="mode-btn" data-mode="simple">Simples (Fácil entendimento)</a></li>
+            <li><a href="#" class="mode-btn" data-mode="advanced">Avançado (Dados científicos)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Acessibilidade</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="btn-accessibility">Abrir Painel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoRadar. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/accessibility.js"></script>
+  <script src="../assets/js/speech.js"></script>
+  <script src="../assets/js/catalog.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

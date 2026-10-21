@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoRadar - Plataforma de informação, conscientização ambiental e acessibilidade com modo de leitura simples e avançado.">
+  <title>EcoRadar — Informação Ambiental Acessível e Tecnológica</title>
+
+  <!-- estilos globais -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+</head>
+<body>
+
+  <!--
+        HEADER FIXO
+  -->
+  <header class="header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="Página Inicial EcoRadar">
+        <img src="assets/img/logo.svg" alt="Logotipo EcoRadar" class="logo-img">
+      </a>
+
+      <!-- menu principal -->
+      <nav class="nav-menu" id="primary-nav-menu" aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Início</a></li>
+          <li><a href="pages/catalog.html" class="nav-link">Notícias</a></li>
+          <li><a href="pages/explorar.html" class="nav-link">Explorar</a></li>
+          <li><a href="pages/sobre.html" class="nav-link">Sobre</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <!-- seletor de modo [simples | avancado] -->
+          <div class="mode-toggle-wrapper" role="radiogroup" aria-label="Seletor de Modo de Leitura">
+            <button class="mode-btn active" data-mode="simple" aria-checked="true">Simples</button>
+            <button class="mode-btn" data-mode="advanced" aria-checked="false">Avançado</button>
+          </div>
+
+          <!-- botao painel de acessibilidade -->
+          <button class="btn-accessibility" aria-label="Abrir Painel de Acessibilidade (Atalho: Alt + A)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="7.5" r="1.5" fill="currentColor"/>
+              <path d="M7 11h10M12 11v8M9 19l3-4 3 4"/>
+            </svg>
+            <span>Acessibilidade</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- botao hamburguer mobile -->
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="primary-nav-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!--
+       CONTEUDO MAIN
+  -->
+  <main class="main-content" id="main-content" role="main">
+
+    <!-- hero section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span> Plataforma Digital de Consciência Ecológica</span>
+          </div>
+          <h1 id="hero-title" class="hero-title">
+            Eco<span>Radar</span>: Informação ambiental de forma simples, acessível e consciente.
+          </h1>
+          <p class="hero-subtitle">
+            Entenda o que está acontecendo com o meio ambiente sem precisar ser especialista. Alternar entre explicações diretas e dados técnicos profundos com um único clique.
+          </p>
+          <div class="hero-cta-group">
+            <a href="pages/catalog.html" class="btn btn-primary">
+              Explorar notícias &rarr;
+            </a>
+            <a href="pages/sobre.html#como-funciona" class="btn btn-outline">
+              Como funciona
+            </a>
+          </div>
+        </div>
+
+        <!-- composicao visual: Planeta + Dados + Tecnologia -->
+        <div class="hero-visual-card">
+          <div class="hero-graphic">
+            <svg class="planet-radar-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+              <!-- grid tecnologico -->
+              <path d="M0 40H400M0 80H400M0 120H400M0 160H400M0 200H400" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              <path d="M80 0V240M160 0V240M240 0V240M320 0V240" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              <!-- orbita do planeta -->
+              <circle cx="200" cy="120" r="85" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+              <circle cx="200" cy="120" r="60" fill="url(#planetGlow)"/>
+              <!-- linhas de radar ativas -->
+              <path d="M200 120 L275 60 A 85 85 0 0 0 200 35 Z" fill="rgba(56, 189, 248, 0.25)"/>
+              <circle cx="250" cy="80" r="5" fill="#38BDF8"/>
+              <circle cx="160" cy="150" r="4" fill="#10B981"/>
+              <defs>
+                <radialGradient id="planetGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#0F4C81"/>
+                  <stop offset="70%" stop-color="#059669"/>
+                  <stop offset="100%" stop-color="#0F172A"/>
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="hero-metrics-overlay">
+            <div class="metric-card">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Acessibilidade Nativa</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">2 Modos</div>
+              <div class="metric-label">Simples e Avançado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- secao de recursos: O diferencial dos Mmdos -->
+    <section class="feature-section" aria-labelledby="feature-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Democratizando a Informação</span>
+          <h2 id="feature-title" class="section-title">Escolha Como Deseja Aprender</h2>
+          <p class="section-description">
+            O EcoRadar permite ajustar a profundidade do conhecimento de acordo com a sua necessidade.
+          </p>
+        </div>
+
+        <div class="modes-comparison-grid">
+          <!-- card modo simples -->
+          <div class="mode-card simple">
+            <span class="mode-badge-tag"> Modo Simples</span>
+            <h3 class="mode-card-title">Linguagem Clara e Direta</h3>
+            <p class="mode-card-desc">
+              Conteúdo focado em conceitos práticos, resumos objetivos e vocabulário sem complicações. Ideal para leitura rápida e para quem busca entender o impacto ambiental no dia a dia.
+            </p>
+          </div>
+
+          <!-- card modo avancado -->
+          <div class="mode-card advanced">
+            <span class="mode-badge-tag"> Modo Avançado</span>
+            <h3 class="mode-card-title">Dados Técnicos e Científicos</h3>
+            <p class="mode-card-desc">
+              Para estudantes, pesquisadores e entusiastas que desejam gráficos, fontes oficiais, estatísticas detalhadas e terminologia especializada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seçao de ultimas noticias -->
+    <section class="feature-section" style="background-color: var(--color-background);" aria-labelledby="news-section-title">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="section-tag">Radar em Tempo Real</span>
+          <h2 id="news-section-title" class="section-title">Destaques Ambientais</h2>
+          <p class="section-description">Acompanhe as notícias mais recentes com a opção de leitura narrada e modos dinâmicos.</p>
+        </div>
+
+        <!-- grade dinamica renderizada pelo catalog.js -->
+        <div class="news-grid" id="news-grid-container">
+          <!-- Fallback enquanto o JS carrega os cards -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="pages/catalog.html" class="btn btn-secondary">
+            Ver Todo o Catálogo de Notícias &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+       RODAPE FOOTER
+  -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo.svg" alt="EcoRadar" class="footer-logo">
+          <p class="footer-tagline">
+            Informação ambiental acessível, moderna e transparente para promover a conscientização planetária através da tecnologia.
+          </p>
+          <div class="footer-accessibility-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v8M8 12h8"/>
+            </svg>
+            <span>Plataforma 100% Acessível</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pages/catalog.html">Catálogo de Notícias</a></li>
+            <li><a href="pages/explorar.html">Explorar Eixos</a></li>
+            <li><a href="pages/sobre.html">Sobre o Projeto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Eixos Ambientais</h4>
+          <ul class="footer-links">
+            <li><a href="pages/catalog.html?cat=Clima">Clima & Temperatura</a></li>
+            <li><a href="pages/catalog.html?cat=Florestas">Florestas & Biomas</a></li>
+            <li><a href="pages/catalog.html?cat=Oceanos">Oceanos & Vida Marinha</a></li>
+            <li><a href="pages/catalog.html?cat=Energia">Energia Renovável</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Acessibilidade</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="btn-accessibility">Abrir Painel de Recursos</a></li>
+            <li><a href="pages/sobre.html#acessibilidade">Síntese de Voz</a></li>
+            <li><a href="pages/sobre.html#acessibilidade">Reconhecimento de Voz</a></li>
+            <li><a href="pages/sobre.html#acessibilidade">Atalhos de Teclado</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoRadar. Todos os direitos reservados. Desenvolvido para fins de informação ambiental e acessibilidade.</p>
+        <div class="footer-bottom-links">
+          <a href="pages/sobre.html">Termos</a>
+          <a href="pages/sobre.html">Privacidade</a>
+          <a href="pages/sobre.html">Contato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="assets/js/accessibility.js"></script>
+  <script src="assets/js/speech.js"></script>
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

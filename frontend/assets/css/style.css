@@ -1,0 +1,19 @@
+/* 
+   ==========================================================================
+   ECORADAR - STYLE.CSS
+   Ponto Central de Carregamento Modular dos Estilos
+   ========================================================================== 
+*/
+
+/* 1. Global & Estrutura Base */
+@import url('./global/global.css');
+@import url('./global/header.css');
+@import url('./global/footer.css');
+
+/* 2. Conteudo e Noticias */
+@import url('./content/content.css');
+@import url('./content/news.css');
+
+/* 3. Responsividade e Acessibilidade */
+@import url('./responsive/responsive.css');
+@import url('./responsive/accessibility.css');
